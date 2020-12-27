@@ -1,15 +1,16 @@
-algoritmo "conteAte10"
-var
-   valor, salto, contador : Inteiro
-inicio
-    contador <- 0
-    Escreva("Quer contar ate quanto? ")
-    Leia(valor)
-    Escreva("Qual sera o valor do salto? ")
-    Leia(salto)
-    Enquanto (contador <= valor) faca
-        EscrevaL(contador)
-        contador <- contador + salto
-    FimEnquanto
-    Escreval("Terminei de contar")
-fimalgoritmo
+//um programa de contar, com salto(pulando um valor)
+//readline sync está dando erro no windows, usei synchronous
+
+const query = require('synchronous-user-input');
+
+
+const valor = query("Quer contar até quanto? ")
+const salto = query("Qual será o valor do salto? ")
+let cont =  0
+
+while(cont < valor){
+    console.log(cont)
+    cont = cont + salto
+    
+}
+console.log('Terminei de contar') 
